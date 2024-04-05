@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB CALCULATOR ADVANCED</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <img class="wsa-icon" src="./icons/wsa-icon.png" alt="WSA LOGO" />
+      <div class="contentMiddle">
+        <h1 class="lable">
+          BODMAS <br />
+          CALCULATOR
+        </h1>
+        <div class="circle">
+          <div class="calculator">
+            <div class="funtionBtns">
+              <span class="material-symbols-rounded" style="color: gray">
+                close_fullscreen
+              </span>
+              <span class="material-symbols-rounded" style="color: grey">
+                equal
+              </span>
+              <span
+                class="material-symbols-rounded calFunBtn"
+                style="color: grey"
+                >calculate
+              </span>
+              <!-- <span
+                class="material-symbols-rounded darkMode"
+                style="color: black"
+              >
+                more_vert
+              </span> -->
+              <span class="material-symbols-rounded darkMode"> contrast </span>
+            </div>
+            <div class="form">
+              <div id="display">
+                <input id="userInput" value="" autocomplete="off" disabled />
+                <br />
+                <input
+                  id="displayResult"
+                  value=""
+                  placeholder="00"
+                  autocomplete="off"
+                  disabled
+                />
+              </div>
+              <hr />
+              <div class="AllButtons">
+                <button class="clear" onclick="clearDisplay()">C</button>
+                <button
+                  class="material-symbols-outlined backspace"
+                  style="font-size: 45px"
+                  onclick="backspace()"
+                >
+                  backspace
+                </button>
+                <button class="symbols" onclick="clearExpression()">CE</button>
+                <button class="symbols" onclick="displayValue('(')">(</button>
+                <button class="symbols" onclick="displayValue(')')">)</button>
+                <button class="symbols" onclick="switchSign()">+/-</button>
+                <button class="symbols" onclick="displayValue('^')">^</button>
+                <button class="symbols" onclick="displayValue('√')">√</button>
+                <button class="numbers" onclick="displayValue('7')">7</button>
+                <button class="numbers" onclick="displayValue('8')">8</button>
+                <button class="numbers" onclick="displayValue('9')">9</button>
+                <button class="symbols" onclick="displayValue('÷')">÷</button>
+                <button class="symbols" onclick="displayValue('%')">%</button>
+                <button class="numbers" onclick="displayValue('4')">4</button>
+                <button class="numbers" onclick="displayValue('5')">5</button>
+                <button class="numbers" onclick="displayValue('6')">6</button>
+                <button class="symbols" onclick="displayValue('x')">x</button>
+                <button class="symbols" onclick="reciprocal()">1/x</button>
+                <button class="numbers" onclick="displayValue('1')">1</button>
+                <button class="numbers" onclick="displayValue('2')">2</button>
+                <button class="numbers" onclick="displayValue('3')">3</button>
+                <button class="symbols" onclick="displayValue('+')">+</button>
+                <button class="equal">=</button>
+                <button class="zero" onclick="displayValue('0')">0</button>
+                <button class="numbers" onclick="displayValue('.')">.</button>
+                <button class="symbols" onclick="displayValue('-')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>© 2023 WSA. ALL RIGHTS RESERVED.</footer>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

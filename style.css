@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Jost:wght@400;600&family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Poppins;
+}
+
+.wsa-icon {
+  width: 15rem;
+  height: auto;
+  margin: 2rem 2rem 0.5rem 2rem;
+}
+
+.mainContainer {
+  background-color: #fbf4fd;
+  border: 5px solid #ffffff;
+  border-radius: 1.5rem;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contentMiddle {
+  display: flex;
+  flex-direction: row;
+}
+
+.lable {
+  font-size: 6vw;
+  font-weight: 800;
+  line-height: 12vw;
+  letter-spacing: 0em;
+  margin: auto;
+}
+
+.funtionBtns {
+  display: none;
+}
+
+hr {
+  display: none;
+}
+
+.calculator {
+  background-color: #ffffff;
+  /* height: 772px; */
+  border-radius: 33px;
+  border: 0.5rem solid #e2e2e2;
+  width: 100%;
+  max-width: 500px;
+  margin: -1rem auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 101px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+#display {
+  /* text-align: right; */
+
+  margin-bottom: 1.25rem;
+  background-color: #f3f2f2;
+  width: 95%;
+  border-radius: 20px;
+  border: 10px solid #f3f2f2;
+  cursor: pointer;
+}
+
+#display:focus {
+  outline: none;
+}
+
+#userInput {
+  /* height: 75px; */
+  font-family: "Jost";
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: 0em;
+
+  text-align: right;
+  background-color: transparent;
+  color: black;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#userInput:focus {
+  outline: none;
+}
+
+#displayResult {
+  font-family: "Jost";
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 92.48px;
+
+  text-align: right;
+  background-color: transparent;
+  /* color: black; */
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#displayResult {
+  outline: none;
+}
+
+.calFunBtn {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #a4a4a4;
+}
+
+.AllButtons {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  padding: none;
+  margin: none;
+}
+
+.numbers,
+.symbols {
+  width: 5rem;
+  height: 3.75rem;
+  border-radius: 6px;
+  border: none;
+  margin: 0.4rem;
+
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 43px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.numbers {
+  background-color: #efefef;
+  color: black;
+}
+
+.symbols {
+  background-color: #fceebd;
+  color: #bd882a;
+}
+
+.clear {
+  background-color: #fceebd;
+  color: #bd882a;
+
+  width: 11.25rem;
+  height: 3.75rem;
+  border-radius: 6px;
+  border: none;
+
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0em;
+
+  cursor: pointer;
+  grid-column: span 2;
+  margin: 0.4rem;
+}
+
+.equal {
+  background-color: #ffc138;
+  color: #8c5a00;
+
+  width: 5rem;
+  height: 8.3rem;
+  border-radius: 6px;
+  border: none;
+
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0em;
+  cursor: pointer;
+
+  grid-row: span 2;
+
+  margin: 0.4rem;
+}
+
+.backspace {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 40;
+
+  width: 11.25rem;
+  height: 3.75rem;
+  border-radius: 6px;
+  border: none;
+
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0em;
+
+  grid-column: span 2;
+  margin: 0.4rem;
+  background-color: #fceebd;
+  color: #bd882a;
+}
+
+.zero {
+  background-color: #efefef;
+  color: black;
+
+  width: 11.25rem;
+  height: 3.75rem;
+  border-radius: 6px;
+  border: none;
+
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0em;
+
+  cursor: pointer;
+
+  grid-column: span 2;
+
+  margin: 0.4rem;
+}
+
+/* Expression= is Removed */
+
+/* active  */
+.numbers:active {
+  /* background-color: #2b2b2b;
+  color: white; */
+  background-color: #c7c7c7;
+}
+.zero:active {
+  /* background-color: #2b2b2b;
+  color: white; */
+  background-color: #c7c7c7;
+}
+.symbols:active {
+  background-color: #ffc138;
+  color: #8c5a00;
+}
+.equal:active {
+  background-color: #fceebd;
+  color: #bd882a;
+}
+.backspace:active {
+  background-color: #ffc138;
+  color: #8c5a00;
+}
+.clear:active {
+  background-color: #ffc138;
+  color: #8c5a00;
+}
+
+.circle {
+  background-color: #f5eaf9;
+  width: 45rem;
+  height: 45rem;
+  /* width: 740px;
+  height: 742px; */
+  border-radius: 50%;
+  z-index: 50;
+  margin: 1rem auto;
+}
+
+footer {
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 24px;
+  letter-spacing: 0em;
+  margin: 2rem;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Responsive styles */
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .contentMiddle {
+    display: block;
+  }
+  .lable {
+    text-align: center;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #fbf4fd;
+  }
+
+  .funtionBtns {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0.3rem;
+  }
+
+  hr {
+    display: block;
+    background-color: #f5eaf9;
+    width: 90%;
+    height: 1px;
+    border-radius: 1px;
+    border: none;
+    margin: 2rem auto;
+  }
+
+  .contentMiddle {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .calculator {
+    padding: 10px;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    /* /////////////////////////////////////////////////////// */
+    max-width: 325px;
+    /* /////////////////////////////////////////////////////// */
+    border-radius: 0px;
+    margin: auto;
+    box-shadow: none;
+  }
+  .mainContainer {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  #display {
+    /* text-align: right; */
+    margin-bottom: 1.25rem;
+
+    background-color: transparent;
+    border-radius: 20px;
+    border: 10px solid #f3f2f2;
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  #displayResult {
+    background-color: transparent;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 92.48px;
+    border: none;
+  }
+
+  #userInput {
+    background-color: transparent;
+    color: #a4a4a4;
+    border: none;
+  }
+
+  .AllButtons {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    padding: none;
+    margin: none;
+  }
+
+  .numbers,
+  .symbols {
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #f3d0fd;
+
+    width: 3.25rem;
+    height: 3.25rem;
+
+    border-radius: 6px;
+    border: none;
+    margin: 0.4rem;
+  }
+
+  .clear {
+    box-shadow: 0px 0px 4px 0px #f3d0fd;
+    width: 7.25rem;
+    height: 3.25rem;
+    border-radius: 6px;
+    border: none;
+  }
+
+  .backspace {
+    box-shadow: 0px 0px 4px 0px #f3d0fd;
+
+    width: 7.25rem;
+    height: 3.25rem;
+    border-radius: 6px;
+    border: none;
+  }
+
+  .zero {
+    background-color: #ffffff;
+    width: 7.25rem;
+    height: 3.25rem;
+    border-radius: 6px;
+    margin: 0.4rem;
+    box-shadow: 0px 0px 4px 0px #f3d0fd;
+  }
+
+  .equal {
+    width: 3.25rem;
+    height: 7.25rem;
+    border-radius: 6px;
+    border: none;
+  }
+
+  .numbers {
+    background-color: white;
+    color: black;
+  }
+
+  .symbols {
+    background-color: #fceebd;
+    color: #bd882a;
+  }
+
+  .equal {
+    background-color: #ffc138;
+    color: #8c5a00;
+    box-shadow: 0px 0px 4px 0px #f3d0fd;
+  }
+  .lable,
+  .wsa-icon,
+  footer {
+    display: none;
+  }
+
+  .circle {
+    background-color: transparent;
+
+    z-index: 50;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Dark Mode*/
+  .dark {
+    /* color: white; */
+    background-color: #242424;
+  }
+
+  .darkNum {
+    background-color: #00000080;
+    color: white;
+    box-shadow: none;
+  }
+  .darkSymbol {
+    background-color: #fceebd;
+    color: #bd882a;
+    box-shadow: none;
+  }
+  .darkEqual {
+    background-color: #ffc138;
+    color: #8c5a00;
+    box-shadow: none;
+  }
+  .darkModeInDark {
+    color: white;
+  }
+  .displayResultDark {
+    color: white;
+  }
+  .hrDark {
+    background-color: #ffffff80;
+  }
+}
